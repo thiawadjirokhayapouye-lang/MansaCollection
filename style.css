@@ -1,0 +1,215 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* HEADER */
+header {
+  background: black;
+  color: gold;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+
+/* NAVIGATION */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* HERO (ACCUEIL) */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h2 {
+  font-size: 32px;
+  color: gold;
+}
+
+.hero-text p {
+  margin-top: 10px;
+}
+
+/* PRODUITS */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* CARTE PRODUIT */
+.product {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: none;
+  border-radius: 10px;
+}
+
+.slider img.active {
+  display: block;
+}
+
+/* TITRES PRODUIT */
+.product h3 {
+  margin-top: 10px;
+  color: gold;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+/* INPUTS */
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* BOUTON */
+button {
+  background: gold;
+  color: black;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: orange;
+}
+
+/* PANIER */
+.cart {
+  padding: 30px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+button {
+  margin-top: 8px;
+}
+
+button:first-of-type {
+  background: gold;
+}
+
+button:last-of-type {
+  background: #444;
+  color: white;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 768px) {
+
+  .hero img {
+    height: 250px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
+}
+.btn-retour-fixed {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: gold;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.btn-retour-fixed:hover {
+  background: orange;
+}

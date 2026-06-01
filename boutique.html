@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Boutique - MANSA</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>MANSA Collection</h1>
+</header>
+
+<a href="index.html" class="btn-retour-fixed">←</a>
+
+
+<section class="products">
+
+  <!-- BOUBOU -->
+  <div class="product">
+    <div class="slider">
+      <img src="images/boubou1.jpg" class="active">
+      <img src="images/boubou2.jpg">
+      <img src="images/boubou3.jpg">
+    </div>
+
+    <h3>Boubou Luxe</h3>
+    <p>50 000 FCFA</p>
+
+    <select id="taille-boubou">
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select>
+
+    <input type="text" id="nom" placeholder="Votre nom">
+    <input type="text" id="adresse" placeholder="Votre adresse">
+
+    <button onclick="orderWhatsApp('Boubou Luxe', 50000, 'taille-boubou')">
+      Commander
+    </button>
+    <button onclick="addToCart('Boubou Luxe', 50000)">
+  Ajouter au panier
+</button>
+  </div>
+
+  <!-- CHAUSSURES -->
+  <div class="product">
+    <div class="slider">
+      <img src="images/chaussure1.webp" class="active">
+      <img src="images/chaussure2.jpg">
+      <img src="images/chaussure3.webp">
+    </div>
+
+    <h3>Chaussures Cuir</h3>
+    <p>35 000 FCFA</p>
+
+    <select id="taille-chaussure">
+      <option value="40">40</option>
+      <option value="41">41</option>
+      <option value="42">42</option>
+      <option value="43">43</option>
+    </select>
+
+    <input type="text" id="nom">
+    <input type="text" id="adresse">
+
+    <button onclick="orderWhatsApp('Chaussures Cuir', 35000, 'taille-chaussure')">
+      Commander
+    </button>
+    <button onclick="addToCart('Chaussures Cuir', 35000)">
+  Ajouter au panier
+</button>
+  </div>
+
+  <!-- SAC -->
+  <div class="product">
+    <div class="slider">
+      <img src="images/sac1.png" class="active">
+      <img src="images/sac2.jpg">
+      <img src="images/sac3.jpg">
+    </div>
+
+    <h3>Sac Premium</h3>
+    <p>25 000 FCFA</p>
+
+    <!-- pas de taille -->
+    <input type="text" id="nom">
+    <input type="text" id="adresse">
+
+    <button onclick="orderWhatsApp('Sac Premium', 25000, null)">
+      Commander
+    </button>
+
+    <button onclick="addToCart('Sac Premium', 25000)">
+    Ajouter au panier
+    </button>
+  </div>
+
+</section>
+<section class="cart">
+  <h2>🛒 Panier</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total : <span id="total">0</span> FCFA</h3>
+
+  <button onclick="sendCartWhatsApp()">Commander tout</button>
+</section>
+
+</body>
+</html>
